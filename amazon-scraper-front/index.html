@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Scraper</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="shortcut icon" href="./src/assets/amazon-icon.png" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+      <header class="main-header-container" draggable="false">
+        <h1>Amazon Product Scraper</h1>
+        <div class="user-interact">
+          <input type="text" id="keyword" placeholder="ex: laptop"/>
+          <button id="scraperBtn">Search</button>
+        </div>
+      </header>
+
+      <section id="product-results" data-animation-state="default"></section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
