@@ -73,7 +73,7 @@ async function getProducts() {
   try { 
 
     // Passando a keyword dada no front, para o back, e esperando um retorno com os produtos relacionados...
-    const response = await fetch(`https://amazon-scraper-jsps.onrender.com/api/scrape?keyword=${encodeURIComponent(keyword)}`);
+    const response = await fetch(`http://localhost:3000/api/scrape?keyword=${encodeURIComponent(keyword)}`);
 
     // Resposta do back: produtos ou error
     const productData = await response.json();
@@ -88,6 +88,12 @@ async function getProducts() {
 
     // resetando os produtos presentes na tela (Se existirem)
     resultsDiv.innerHTML = "";
+
+    // Se não for um array, ent houve error no get.
+    if (!Array.isArray(productData)) {
+      changeButtonState(buttonSearchStates.error)();
+      throw new Error("Erro: resposta inesperada do servidor.");
+    }
 
     // Atualizando os produtos.
     productData.forEach((item) => {
