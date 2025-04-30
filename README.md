@@ -1,6 +1,6 @@
 # Amazon Scraper Com Bun & Vite
 
-- Deploy do front: 
+- Deploy do front: https://amazon-scraper-front.vercel.app/
 - Deploy do  back: 
 
 ## 🧪 Como usar
