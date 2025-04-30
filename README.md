@@ -2,10 +2,13 @@
 
 - Deploy do front: https://amazon-scraper-front.vercel.app
 - Deploy do  back: https://amazon-scraper-jsps.onrender.com
+  
+endpoint do back: /api/scrape?keyword=
+exemplo de uso: https://amazon-scraper-jsps.onrender.com/api/scrape?keyword=laptop
 
 ## 🧪 Como usar
 - Acesse o frontend via navegador
-- Insira uma palavra-chave (ex: laptop)
+- Insira uma palavra-chave (ex: laptop) na entrada de texto
 - Clique em "Search" para ver os produtos extraídos da primeira página da Amazon
 
 ---
@@ -49,3 +52,5 @@ npm install
 ```bash
 npm run dev
 ```
+
+**Observação:** Para acessar o back localmente, se deve alterar a url da requisição presente em: amazon-scraper-front/src/main.js e por http://localhost:3000/ no lugar do deploy do back: https://amazon-scraper-jsps.onrender.com.
