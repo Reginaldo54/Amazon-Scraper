@@ -1,7 +1,7 @@
 # Amazon Scraper Com Bun & Vite
 
-- Deploy do front: https://amazon-scraper-front.vercel.app/
-- Deploy do  back: 
+- Deploy do front: https://amazon-scraper-front.vercel.app
+- Deploy do  back: https://amazon-scraper-jsps.onrender.com
 
 ## 🧪 Como usar
 - Acesse o frontend via navegador
