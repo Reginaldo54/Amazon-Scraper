@@ -1,6 +1,6 @@
 # Amazon Scraper Com Bun & Vite
 
-## Deploys
+##   Deploys
 - Deploy do front: https://amazon-scraper-front.vercel.app
 - Deploy do  back: https://amazon-scraper-jsps.onrender.com
 
