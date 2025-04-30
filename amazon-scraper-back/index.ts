@@ -12,7 +12,23 @@ const app = express();
 const PORT = 3000; 
 
 // Permitindo que outros dominios/portas acessem o back
-app.use(cors()); 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://amazon-scraper-front.vercel.app",
+  "https://amazon-scraper-hdl7ga0h2-reginaldo-alves-projects.vercel.app"
+];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET"],
+  allowedHeaders: ["Content-Type"]
+}));
 
 // Definindo Rota do tipo get, para mandar infomações para o front.
 app.get("/api/scrape", async (req: Request, res: Response) => {
@@ -42,7 +58,6 @@ app.get("/api/scrape", async (req: Request, res: Response) => {
         'User-Agent': 'Mozilla/5.0', 
       },
     });
-
     console.log("=== Amazon Acessada!\n");
 
     console.log("\n=== Transformando os dados da amazon em DOM...");
@@ -122,5 +137,5 @@ app.get("/api/scrape", async (req: Request, res: Response) => {
 
 // Inicia o servidor na porta definida, e o mantém ativo.
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on https://amazon-scraper-jsps.onrender.com`);
 });
