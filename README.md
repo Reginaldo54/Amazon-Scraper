@@ -2,15 +2,14 @@
 
 - Deploy do front: https://amazon-scraper-front.vercel.app
 - Deploy do  back: https://amazon-scraper-jsps.onrender.com
-  
-endpoint do back: /api/scrape?keyword=
-exemplo de uso: https://amazon-scraper-jsps.onrender.com/api/scrape?keyword=laptop
 
 ## 🧪 Como usar
 - Acesse o frontend via navegador
 - Insira uma palavra-chave (ex: laptop) na entrada de texto
 - Clique em "Search" para ver os produtos extraídos da primeira página da Amazon
 
+- endpoint do back: /api/scrape?keyword=
+- exemplo de uso: https://amazon-scraper-jsps.onrender.com/api/scrape?keyword=laptop
 ---
 
 **Observação:** Como a Amazon bloqueia scrapers facilmente, esse script pode falhar se a requisição for detectada como bot. Use com moderação e apenas para fins educacionais.
