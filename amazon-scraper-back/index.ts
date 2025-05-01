@@ -123,7 +123,7 @@ app.get("/api/scrape", async (req: Request, res: Response) => {
 
     // Mandando os produtos encontrados para o front.
     if (!Array.isArray(products)) 
-      res.json(undefined);d
+      res.json(undefined);
     else
       res.json(products);
 
@@ -147,5 +147,5 @@ app.get("/api/scrape", async (req: Request, res: Response) => {
 
 // Inicia o servidor na porta definida, e o mantém ativo.
 app.listen(PORT, () => {
-  console.log(`Server running on https://amazon-scraper-jsps.onrender.com`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
