@@ -8,16 +8,14 @@
 - Acesse o frontend via navegador
 - Insira uma palavra-chave (ex: laptop) na entrada de texto
 - Clique em "Search" para ver os produtos extraídos da primeira página da Amazon
-
-- endpoint do back: /api/scrape?keyword=
-- exemplo de uso: https://amazon-scraper-jsps.onrender.com/api/scrape?keyword=laptop
 ---
 
-**Observação:** Como a Amazon bloqueia scrapers facilmente, esse script pode falhar se a requisição for detectada como bot. Use com moderação e apenas para fins educacionais.
+## ⚠️ Observação:
+- Como a Amazon bloqueia scrapers facilmente, esse script pode falhar se a requisição for detectada como bot.
+- Caso os script nos deploys não funcionarem como devido, tente localmente! O script funciona melhor localmente.
+---
 
-
-
-# Quer instalar localmente? Siga o passo a passo!
+## Quer instalar localmente? Siga o passo a passo!
 
 ## 📦 Backend
 
@@ -35,6 +33,9 @@ bun install
 ```bash
 bun run index.ts
 ```
+**⚠️Observação:**
+- endpoint do back: /api/scrape?keyword=
+- exemplo de uso: https://amazon-scraper-jsps.onrender.com/api/scrape?keyword=laptop
 
 ## 💻 Front
 
@@ -53,4 +54,7 @@ npm install
 npm run dev
 ```
 
-**Observação:** Para acessar o back localmente, se deve alterar a url da requisição presente em: amazon-scraper-front/src/main.js e por http://localhost:3000/ no lugar do deploy do back: https://amazon-scraper-jsps.onrender.com.
+**⚠️Observação:** Para acessar o back localmente, se deve alterar a url da requisição presente em: amazon-scraper-front/src/main.js e por http://localhost:3000/ no lugar do deploy do back: https://amazon-scraper-jsps.onrender.com.
+![Screenshot_6](https://github.com/user-attachments/assets/57506fe7-451b-445c-8854-c70e50612b02)
+![Screenshot_5](https://github.com/user-attachments/assets/77eefe85-daa4-44e2-ad68-74666437efd2)
+
