@@ -11,11 +11,11 @@
 
 ---
 ## ⚠️ Observação:
-- Como a Amazon bloqueia scrapers facilmente, esse script pode falhar se a requisição for detectada como bot.
+- Como a Amazon bloqueia scrapers facilmente, esse script pode falhar se a requisição for detectada como bot (acontece muito com deploys...).
 - Caso os script nos deploys não funcionarem como devido, tente localmente! O script funciona melhor localmente.
 ---
 
-## Quer instalar localmente? Siga o passo a passo!
+## Quer usar localmente? Siga o passo a passo!
 
 ## 📦 Backend
 
