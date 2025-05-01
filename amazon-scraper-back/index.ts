@@ -2,7 +2,7 @@
 import express from "express";
 import type { Request, Response } from "express";
 import axios from "axios"; 
-import cors from "cors"; // permitindo acesso por todas as rotas.
+import cors from "cors"; // permitindo acesso do site a outras portas ou dominios
 import { JSDOM } from "jsdom";
 
 // Criando o servidor e o armazenar a referência dele em uma variável
@@ -122,12 +122,21 @@ app.get("/api/scrape", async (req: Request, res: Response) => {
     console.log("\n=== Enviando dados...");
 
     // Mandando os produtos encontrados para o front.
+    if (!Array.isArray(products)) 
+      res.json(undefined);
+
     res.json(products);
 
     console.log("=== Dados enviados!");
 
   } 
   catch (err:any) { // Roda se não conseguir pegar os produtos da amazon
+
+    if (err.code === 'ERR_BAD_RESPONSE') {
+      console.error("Error: Unable to connect to amazon.");
+      res.status(503).json({ error: "Unable to connect to amazon." });
+    }
+
     console.error("Error Code: "+err.code);  
     console.error("Error Message: "+err.message);
     res.status(500).json({ error: "Failed to scrape data" });
