@@ -123,9 +123,9 @@ app.get("/api/scrape", async (req: Request, res: Response) => {
 
     // Mandando os produtos encontrados para o front.
     if (!Array.isArray(products)) 
-      res.json(undefined);
-
-    res.json(products);
+      res.json(undefined);d
+    else
+      res.json(products);
 
     console.log("=== Dados enviados!");
 
@@ -136,10 +136,11 @@ app.get("/api/scrape", async (req: Request, res: Response) => {
       console.error("Error: Unable to connect to amazon.");
       res.status(503).json({ error: "Unable to connect to amazon." });
     }
-
-    console.error("Error Code: "+err.code);  
-    console.error("Error Message: "+err.message);
-    res.status(500).json({ error: "Failed to scrape data" });
+    else {
+       console.error("Error Code: "+err.code);  
+       console.error("Error Message: "+err.message);
+       res.status(500).json({ error: "Failed to scrape data" });
+    }
   }
 
 });
