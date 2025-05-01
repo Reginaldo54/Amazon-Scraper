@@ -14,10 +14,10 @@ const buttonSearchStates = {
   searchAgain:'Search Again'
 }
 
+ let idTimeout; // fora da função para evitar multiplos timeOuts.
+
 // Função para mudar os estados do botão -> feedback visual simples
 function changeButtonState(state) {
-
-  let idTimeout;
 
   // Alterando o texto do botão.
   scraperBtn.textContent = state;
